@@ -4,8 +4,8 @@ import React, { Fragment } from "react";
 import {
   stopSpectrogram,
   startSpectrogram,
-} from "../Scripts/spectrogramScripts";
-import { getAudioStream } from "../Scripts/microphoneScripts";
+} from "../../Scripts/spectrogramScripts";
+import { getAudioStream } from "../../Scripts/microphoneScripts";
 
 declare interface AudioSpectrogramProps {
   micOn: boolean;

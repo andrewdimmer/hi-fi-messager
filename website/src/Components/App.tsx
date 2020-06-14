@@ -1,10 +1,10 @@
-import { Container, Typography } from "@material-ui/core";
+import { Container, Divider, Typography } from "@material-ui/core";
 import React, { Fragment } from "react";
 import { styles } from "../Styles";
 import AudioSpectrogram from "./Content/AudioSpectrogram";
+import MessagerSendBar from "./Content/MessagerSendBar";
 import NavBar from "./Layouts/NavBar";
-import ToggleAudioButton from "./Content/ToggleAudioButton";
-import { startMic, stopMic } from "./Scripts/microphoneScripts";
+import { startMic, stopMic } from "../Scripts/microphoneScripts";
 
 declare interface AppProps {
   theme: "light" | "dark";
@@ -32,12 +32,13 @@ const App: React.FunctionComponent<AppProps> = ({ theme, toggleTheme }) => {
         <Container className={classes.pageTitle}>
           <Typography variant="h3">Welcome to HiFi Messager!</Typography>
         </Container>
+        <MessagerSendBar
+          micOn={micOn}
+          toggleMic={toggleMic}
+          classes={classes}
+        />
       </Container>
-      <ToggleAudioButton
-        micOn={micOn}
-        toggleMic={toggleMic}
-        classes={classes}
-      />
+      <Divider className={classes.margined} />
       <AudioSpectrogram micOn={micOn} classes={classes} />
     </Fragment>
   );
