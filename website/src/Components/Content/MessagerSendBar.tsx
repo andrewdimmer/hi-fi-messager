@@ -2,6 +2,7 @@ import { Fab, Grid, TextField } from "@material-ui/core";
 import SendIcon from "@material-ui/icons/Send";
 import React from "react";
 import ToggleAudioButton from "./ToggleAudioButton";
+import { insertIntoQueue } from "../Scripts/messageSendScripts";
 
 declare interface MessagerSendBarProps {
   micOn: boolean;
@@ -14,7 +15,7 @@ const MessagerSendBar: React.FunctionComponent<MessagerSendBarProps> = ({
   toggleMic,
   classes,
 }) => {
-  const [newMessage, setNewMessage] = React.useState<String>("");
+  const [newMessage, setNewMessage] = React.useState<string>("");
 
   const handleNewMessageChange = (
     event: React.ChangeEvent<HTMLInputElement>
@@ -22,7 +23,10 @@ const MessagerSendBar: React.FunctionComponent<MessagerSendBarProps> = ({
     setNewMessage(event.target.value);
   };
 
-  const sendNewMessage = () => {};
+  const sendNewMessage = () => {
+    insertIntoQueue(newMessage);
+    setNewMessage("");
+  };
 
   return (
     <Grid
