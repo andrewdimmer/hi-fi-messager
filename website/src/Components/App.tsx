@@ -4,7 +4,7 @@ import { styles } from "../Styles";
 import AudioSpectrogram from "./Content/AudioSpectrogram";
 import MessagerSendBar from "./Content/MessagerSendBar";
 import NavBar from "./Layouts/NavBar";
-import { startMic, stopMic } from "./Scripts/microphoneScripts";
+import { startMic, stopMic } from "../Scripts/microphoneScripts";
 
 declare interface AppProps {
   theme: "light" | "dark";

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import CustomThemeProvider from "./Styles/CustomThemeProvider";
-import { initAudio } from "./Components/Scripts/audioPlayerScripts";
+import { initAudio } from "./Scripts/audioPlayerScripts";
 
 initAudio();
 ReactDOM.render(<CustomThemeProvider />, document.getElementById("root"));

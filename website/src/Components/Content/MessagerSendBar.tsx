@@ -2,7 +2,7 @@ import { Fab, Grid, TextField } from "@material-ui/core";
 import SendIcon from "@material-ui/icons/Send";
 import React from "react";
 import ToggleAudioButton from "./ToggleAudioButton";
-import { insertIntoQueue } from "../Scripts/messageSendScripts";
+import { insertIntoQueue } from "../../Scripts/messageSendScripts";
 
 declare interface MessagerSendBarProps {
   micOn: boolean;
@@ -24,7 +24,7 @@ const MessagerSendBar: React.FunctionComponent<MessagerSendBarProps> = ({
   };
 
   const sendNewMessage = () => {
-    insertIntoQueue(newMessage + "\n");
+    insertIntoQueue(newMessage + "*ENTER");
     setNewMessage("");
   };
 
