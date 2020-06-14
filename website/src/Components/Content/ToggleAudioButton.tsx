@@ -20,7 +20,7 @@ const ToggleAudioButton: React.FunctionComponent<ToggleAudioButtonProps> = ({
       placement="top"
       PopperProps={{ disablePortal: true }}
     >
-      <Fab color="primary" onClick={toggleMic}>
+      <Fab color={micOn ? "primary" : "inherit"} onClick={toggleMic}>
         {micOn ? <Mic /> : <MicOff />}
       </Fab>
     </Tooltip>
