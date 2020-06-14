@@ -7,12 +7,14 @@ import { insertIntoQueue } from "../../Scripts/messageSendScripts";
 declare interface MessagerSendBarProps {
   micOn: boolean;
   toggleMic: () => void;
+  recordSentMessage: (message: string) => void;
   classes: any;
 }
 
 const MessagerSendBar: React.FunctionComponent<MessagerSendBarProps> = ({
   micOn,
   toggleMic,
+  recordSentMessage,
   classes,
 }) => {
   const [newMessage, setNewMessage] = React.useState<string>("");
@@ -24,6 +26,7 @@ const MessagerSendBar: React.FunctionComponent<MessagerSendBarProps> = ({
   };
 
   const sendNewMessage = () => {
+    recordSentMessage(newMessage);
     insertIntoQueue(newMessage + "*ENTER");
     setNewMessage("");
   };
