@@ -5,6 +5,7 @@ import AudioSpectrogram from "./Content/AudioSpectrogram";
 import MessagerSendBar from "./Content/MessagerSendBar";
 import NavBar from "./Layouts/NavBar";
 import { startMic, stopMic } from "../Scripts/microphoneScripts";
+import MessagerMessageBox from "./Content/MessagerMessageBox";
 
 declare interface AppProps {
   theme: "light" | "dark";
@@ -32,6 +33,7 @@ const App: React.FunctionComponent<AppProps> = ({ theme, toggleTheme }) => {
         <Container className={classes.pageTitle}>
           <Typography variant="h3">Welcome to HiFi Messager!</Typography>
         </Container>
+        <MessagerMessageBox classes={classes} />
         <MessagerSendBar
           micOn={micOn}
           toggleMic={toggleMic}
