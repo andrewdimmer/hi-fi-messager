@@ -24,7 +24,7 @@ const MessagerSendBar: React.FunctionComponent<MessagerSendBarProps> = ({
   };
 
   const sendNewMessage = () => {
-    insertIntoQueue(newMessage);
+    insertIntoQueue(newMessage + "\n");
     setNewMessage("");
   };
 

@@ -1,6 +1,5 @@
 export const initAudio = () => {
   const element = document.getElementById("audio_div");
-  console.log(element);
   if (element) {
     let innerHTML = `<audio controls id="A_Audio"><source src="${window.location.href}/assets/audio/43404__simkiott__record-scratch.wav" type="audio/wav" /></audio>`;
     innerHTML += `<audio controls id="B_Audio"><source src="${window.location.href}/assets/audio/56401__oliver-eye__jsplash2.wav" type="audio/wav" /></audio>`;
