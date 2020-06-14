@@ -21,19 +21,8 @@ export const styles = makeStyles((theme: Theme) =>
     marginRight: {
       marginRight: theme.spacing(2),
     },
-    profileAvatarContainer: {
-      width: "100%",
-    },
     marginsAuto: {
       margin: "auto",
-    },
-    profileViewEditGrid: {
-      padding: 0,
-      marginTop: theme.spacing(2),
-      marginBottom: theme.spacing(2),
-    },
-    profileEditImageButton: {
-      marginTop: "-60px",
     },
     centerText: {
       textAlign: "center",
@@ -42,28 +31,11 @@ export const styles = makeStyles((theme: Theme) =>
       padding: theme.spacing(2),
       textAlign: "center",
     },
-    playBox: {
-      width: "100vw",
-      height: "100vh",
-      position: "fixed",
-      top: 0,
-      bottom: 0,
-      left: 0,
-      right: 0,
-      zIndex: 1075,
-      backgroundColor: theme.palette.background.default,
-    },
-    fullSize: {
-      width: "100%",
-      height: "100%",
-    },
-    fab: {
-      position: "absolute",
-      bottom: theme.spacing(2),
-      right: theme.spacing(2),
-    },
     themeBackgroundColor: {
       background: theme.palette.background.default,
+    },
+    fullWidth: {
+      width: "100%",
     },
   })
 );
